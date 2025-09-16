@@ -25,10 +25,10 @@ const aban = localFont({
       path: "../assets/fonts/Aban.ttf",
       weight: "500",
     },
-    {
-      path: "../assets/fonts/Aban-bold.ttf",
-      weight: "700",
-    },
+    // {
+    //   path: "../assets/fonts/Aban-bold.ttf",
+    //   weight: "700",
+    // },  برای وزن های متفاوت
   ],
 });
 
