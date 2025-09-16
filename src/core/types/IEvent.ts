@@ -7,6 +7,8 @@ export interface IEvent {
     category: string;
     capacity: number;
     organizerId: string;
+    imageAddress: string;
     id: string;
     personId: string;
+    
 }
