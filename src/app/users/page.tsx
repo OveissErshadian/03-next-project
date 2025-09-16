@@ -1,10 +1,11 @@
 import { getUsers } from "@/core/api/users"
+import Container from "../components/container/Container"
 
 const UsersPage = async() => {
     const users = await getUsers()
     console.log("users", users)
   return (
-    <div>
+    <Container>
       <h1 className="">Our users</h1>
       <ul className="flex flex-wrap gap-1">
         {users.map((value) => (
@@ -14,7 +15,7 @@ const UsersPage = async() => {
           </div>
         ))}
       </ul>
-    </div>
+    </Container>
   )
 }
 
