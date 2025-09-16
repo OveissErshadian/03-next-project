@@ -1,39 +1,9 @@
-interface IUser {
-  name: string;
-  avatar: string;
-  email: string;
-  hashedPassword: string;
-  role: string;
-  id: string;
-}
+import { getEvents } from "@/core/api/events";
 
-interface IEvents {
-    createdAt: number;
-    title: string;
-    description: string;
-    price: number;
-    cover: string;
-    category: string;
-    capacity: number;
-    organizerId: string;
-    id: string;
-    personId: string;
-}
-
-
-const getEvents = async (): Promise<IEvents[]> => {
-  const res = await fetch(
-    "https://66e697a717055714e589f9b8.mockapi.io/persons/2/events"
-  );
-  if (!res) {
-    throw new Error("failed to fetch events");
-  }
-  return res.json();
-};
 
 const EventsPage = async () => {
   const events = await getEvents();
-  console.log("22", events);
+
   return (
     <div>
       <h1>Upcoming Events</h1>
