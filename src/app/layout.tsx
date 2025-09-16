@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Inter } from "next/font/google"
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,9 +14,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const inter = Inter({
+//
+export const inter = Inter({
   subsets: ["latin"],
-})
+});
+
+const aban = localFont({
+  src: [
+    {
+      path: "../assets/fonts/Aban.ttf",
+      weight: "500",
+    },
+    {
+      path: "../assets/fonts/Aban-bold.ttf",
+      weight: "700",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,7 +46,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        className={inter.className}
+        // className={inter.className}
+        className={aban.className}
       >
         {children}
       </body>
