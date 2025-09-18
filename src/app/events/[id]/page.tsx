@@ -1,3 +1,4 @@
+import SubmitButton from "@/components/SubmitButton/SubmitButton";
 import { FC } from "react";
 
 interface IProps {
@@ -30,9 +31,7 @@ const EventPage: FC<IProps> = ({ params }) => {
   return (
     <form action={bookEvent}>
       <input type="hidden" name="eventId" value={params.id} />
-      <button type="submit" className="bg-red-600 p-4 rounded-2xl">
-        book event
-      </button>
+      <SubmitButton />
     </form>
   );
 };
