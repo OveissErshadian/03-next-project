@@ -1,6 +1,5 @@
 import { getEvents } from "@/core/api/events";
-import EventCard from "../components/EventCard/EventCard";
-
+import EventCard from "../../components/EventCard/EventCard";
 
 const EventsPage = async () => {
   const events = await getEvents();
@@ -10,7 +9,7 @@ const EventsPage = async () => {
       <h1>Upcoming Events</h1>
       <div className="flex flex-wrap gap-1">
         {events.map((value) => (
-          <EventCard value={value} key={value.title}/>
+          <EventCard value={value} key={value.title} />
         ))}{" "}
       </div>
     </div>
